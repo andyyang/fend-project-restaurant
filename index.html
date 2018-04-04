@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section id="map-container">
+      <div id="map" role="application" aria-label="Map with restaurants"></div>
+    </section>
+    <section id="restaurants-container">
+      <div class="filter-options" role="region" aria-roledescription="filter" aria-labelledby="filter-heading">
+        <h2 id="filter-heading">Filter Results</h2>
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <option value="all">All Neighborhoods</option>
+        </select>
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <option value="all">All Cuisines</option>
+        </select>
+      </div>
+      <ul id="restaurants-list" class="container"></ul>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="js/index.js"> </script>
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHUe0piTNP7nqks1L7QJ05yg1jDKUodes&libraries=places&callback=initMap"></script>
+
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/">Restaurant Reviews</a> All Rights Reserved.
+  </footer>
+
+</body>
+
+</html>
