@@ -202,7 +202,7 @@ nav h1 a {
   margin: 0;
   padding: 10px 10px 30px;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 #restaurants-list li {
@@ -225,7 +225,7 @@ nav h1 a {
   min-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font: 200 14pt Arial,sans-serif;
   letter-spacing: 0;
@@ -262,7 +262,7 @@ nav h1 a {
 
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 85%;
+  height: calc(100% - 145px);
   position: fixed;
   right: 0;
   top: 80px;
@@ -390,23 +390,30 @@ nav h1 a {
 
 /* ====================== Fluid Breakpoints ====================== */
 
-@media screen and (min-width: 781px) {
+@media screen and (min-width: 1024px) {
   #breadcrumb {
-    width: 100%;
+    padding-left: 30px;
   }
 
-  #restaurants-list,
-  .inside #maincontent {
-    width: 780px;
-    margin-left: auto;
-    margin-right: auto;
+  #restaurant-container,
+  #reviews-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #map {
+    height: 380px;
   }
 
-  .inside #map-container {
-    margin-left: 390px;
-    top: 130px;
-    width: 390px;
-    right: auto;
+  #restaurants-list li {
+    width: 260px;
+    padding: 15px 20px;
+  }
+
+  #restaurants-list li h2 {
+    font-size: 13pt;
   }
 
 }
